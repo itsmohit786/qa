@@ -16,7 +16,9 @@
                 </div>
 
                 <div class="card-body">
-                   @foreach ($questions as $question)
+                    @include('layouts._messages')
+
+                    @foreach ($questions as $question)
                        <div class="media">
                            <div class="d-flex flex-column counters">
                                <div class="vote">
@@ -40,11 +42,11 @@
                        </div>
                        <hr>
 
-                       @endforeach
-                    </div>
-                    <div class="mx-auto">
-                        {{$questions->links('pagination::bootstrap-4')}}
-                    </div>
+                    @endforeach
+                </div>
+                <div class="mx-auto">
+                    {{$questions->links('pagination::bootstrap-4')}}
+                </div>
             </div>
         </div>
     </div>
